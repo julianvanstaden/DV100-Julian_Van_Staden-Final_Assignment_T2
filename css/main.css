@@ -1,0 +1,27 @@
+body{
+    background-color: #e3f2fd;
+}
+
+.jumbotron {
+    background-image: url(..//assets/header\ sandwich.jpg);
+    background-size: cover;
+}
+
+.about{
+    margin:80px;
+    text-align: center;
+    font-size: 12px;
+    border: 2px solid burlywood ;
+    padding: 40px;
+}
+
+.card{
+    width: 250px;
+    height: 375px;
+    margin-right: 30px;
+}
+
+.container{
+    margin-left: 90px;
+}
+

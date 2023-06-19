@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="..//css/buildsub.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="#">
+            <img src="../assets/logo.jpg" alt="logo" style="border-radius: 50%; width: 40px; height: 40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="..//index.html">HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active" style="margin-left: 20px; margin-right: 20px; margin-top: 8px;">
+                BUILD A SUB
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="..//pages/checkout.html">CHECKOUT <span class="sr-only">(current)</span></a>
+              </li>
+         </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      <div class="container mt-5">
+        <h2>Sub Order Form</h2>
+        <form>
+          <!-- Sub Name -->
+          <div class="form-group">
+            <label for="subName">Sub Name:</label>
+            <input type="text" class="form-control" id="subName" placeholder="Enter sub name" required>
+          </div>
+          
+          <!-- Bread Selection -->
+          <div class="form-group">
+            <label for="bread">Choose Bread:</label>
+            <select class="form-control" id="bread" required>
+              <option value="">Select Bread</option>
+              <option value="italian">Italian</option>
+              <option value="whole_wheat">Whole Wheat</option>
+              <option value="multigrain">Multigrain</option>
+            </select>
+          </div>
+          
+          <!-- Toppings Selection -->
+          <div class="form-group">
+            <label for="toppings">Choose Toppings (Select at least 5):</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping1" value="lettuce">
+                <label class="form-check-label" for="topping1">Lettuce</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping2" value="tomato">
+                <label class="form-check-label" for="topping2">Tomato</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping3" value="onion">
+                <label class="form-check-label" for="topping3">Onion</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="bell_pepper">
+                <label class="form-check-label" for="topping4">Bell Pepper</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="pickles">
+                <label class="form-check-label" for="topping4">Pickles</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="olives">
+                <label class="form-check-label" for="topping4">Olives</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="cucumber">
+                <label class="form-check-label" for="topping4">Cucumber</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="jalapenos">
+                <label class="form-check-label" for="topping4">Jalapenos</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="spinach">
+                <label class="form-check-label" for="topping4">Spinach</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="avo">
+                <label class="form-check-label" for="topping4">Avocado</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="sprouts">
+                <label class="form-check-label" for="topping4">Sprouts</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="mushrooms">
+                <label class="form-check-label" for="topping4">Mushrooms</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="swiss cheese">
+                <label class="form-check-label" for="topping4">Swiss Cheese</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="cheddar cheese">
+                <label class="form-check-label" for="topping4">Cheddar Cheese</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="pepperoni">
+                <label class="form-check-label" for="topping4">pepperoni</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="ham">
+                <label class="form-check-label" for="topping4">Ham</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="turkey">
+                <label class="form-check-label" for="topping4">Turkey</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="roast beef">
+                <label class="form-check-label" for="topping4">Roast Beef</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="chicken">
+                <label class="form-check-label" for="topping4">Chicken</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="topping4" value="bacon">
+                <label class="form-check-label" for="topping4">Bacon</label>
+              </div>
+
+          </div>
+          
+          <!-- Sauce Selection -->
+          <div class="form-group">
+            <label for="sauce">Choose Sauce (Minimum of 1):</label>
+                 <!-- Sauces Checklist -->
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="sauce1" value="mayo">
+            <label class="form-check-label" for="sauce1">Mayonnaise</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="sauce2" value="mustard">
+            <label class="form-check-label" for="sauce2">Mustard</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="sauce3" value="ranch">
+            <label class="form-check-label" for="sauce3">Ranch</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="sauce3" value="tomato sauce">
+            <label class="form-check-label" for="sauce3">Tomato Sauce</label>
+          </div>
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="sauce4" value="chipotle">
+            <label class="form-check-label" for="sauce4">Chipotle</label>
+          </div>
+          </div>
+          
+          <!-- Sub Cost -->
+          <div class="form-group">
+            <label for="subCost">Sub Cost:</label>
+            <input type="number" class="form-control" id="subCost" value="0" readonly>
+          </div>
+          
+          <!-- Add Sub Button -->
+          <button type="submit" class="btn btn-primary">Add Sub</button>
+        </form>
+      </div>
+  </body>
+</html>  
