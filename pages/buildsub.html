@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="..//css/buildsub.css">
+    <script src="..//js/index.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -44,7 +45,7 @@
         <h2>Sub Order Form</h2>
         <form>
           <!-- Sub Name -->
-          <div class="form-group">
+          <div class="subForm" onchange="realTimeCost()">
             <label for="subName">Sub Name:</label>
             <input type="text" class="form-control" id="subName" placeholder="Enter sub name" required>
           </div>
@@ -60,87 +61,91 @@
             </select>
           </div>
           
+          <div class="right">
+            <div class="orderCost" id="realTimeCost">R0.00</div>
+          </div>
+
           <!-- Toppings Selection -->
           <div class="form-group">
             <label for="toppings">Choose Toppings (Select at least 5):</label>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping1" value="lettuce">
+                <input class="form-check-input" type="checkbox" id="topping1" value="lettuce" data-cost="10">
                 <label class="form-check-label" for="topping1">Lettuce</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping2" value="tomato">
+                <input class="form-check-input" type="checkbox" id="topping2" value="tomato" data-cost="12">
                 <label class="form-check-label" for="topping2">Tomato</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping3" value="onion">
+                <input class="form-check-input" type="checkbox" id="topping3" value="onion" data-cost="15">
                 <label class="form-check-label" for="topping3">Onion</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="bell_pepper">
+                <input class="form-check-input" type="checkbox" id="topping4" value="bell_pepper" data-cost="15">
                 <label class="form-check-label" for="topping4">Bell Pepper</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="pickles">
+                <input class="form-check-input" type="checkbox" id="topping4" value="pickles" data-cost="17">
                 <label class="form-check-label" for="topping4">Pickles</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="olives">
+                <input class="form-check-input" type="checkbox" id="topping4" value="olives" data-cost="13">
                 <label class="form-check-label" for="topping4">Olives</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="cucumber">
+                <input class="form-check-input" type="checkbox" id="topping4" value="cucumber" data-cost="8">
                 <label class="form-check-label" for="topping4">Cucumber</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="jalapenos">
+                <input class="form-check-input" type="checkbox" id="topping4" value="jalapenos" data-cost="20">
                 <label class="form-check-label" for="topping4">Jalapenos</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="spinach">
+                <input class="form-check-input" type="checkbox" id="topping4" value="spinach" data-cost="20">
                 <label class="form-check-label" for="topping4">Spinach</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="avo">
+                <input class="form-check-input" type="checkbox" id="topping4" value="avo" data-cost="25">
                 <label class="form-check-label" for="topping4">Avocado</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="sprouts">
+                <input class="form-check-input" type="checkbox" id="topping4" value="sprouts" data-cost="30"
                 <label class="form-check-label" for="topping4">Sprouts</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="mushrooms">
+                <input class="form-check-input" type="checkbox" id="topping4" value="mushrooms" data-cost="15">
                 <label class="form-check-label" for="topping4">Mushrooms</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="swiss cheese">
+                <input class="form-check-input" type="checkbox" id="topping4" value="swiss cheese" data-cost="15">
                 <label class="form-check-label" for="topping4">Swiss Cheese</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="cheddar cheese">
+                <input class="form-check-input" type="checkbox" id="topping4" value="cheddar cheese" data-cost="12">
                 <label class="form-check-label" for="topping4">Cheddar Cheese</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="pepperoni">
+                <input class="form-check-input" type="checkbox" id="topping4" value="pepperoni" data-cost="20">
                 <label class="form-check-label" for="topping4">pepperoni</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="ham">
+                <input class="form-check-input" type="checkbox" id="topping4" value="ham" data-cost="20">
                 <label class="form-check-label" for="topping4">Ham</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="turkey">
+                <input class="form-check-input" type="checkbox" id="topping4" value="turkey" data-cost="25">
                 <label class="form-check-label" for="topping4">Turkey</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="roast beef">
+                <input class="form-check-input" type="checkbox" id="topping4" value="roast beef" data-cost="25">
                 <label class="form-check-label" for="topping4">Roast Beef</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="chicken">
+                <input class="form-check-input" type="checkbox" id="topping4" value="chicken" data-cost="20">
                 <label class="form-check-label" for="topping4">Chicken</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="topping4" value="bacon">
+                <input class="form-check-input" type="checkbox" id="topping4" value="bacon" data-cost="30">
                 <label class="form-check-label" for="topping4">Bacon</label>
               </div>
 
@@ -173,15 +178,24 @@
           </div>
           </div>
           
-          <!-- Sub Cost -->
-          <div class="form-group">
-            <label for="subCost">Sub Cost:</label>
-            <input type="number" class="form-control" id="subCost" value="0" readonly>
-          </div>
-          
+          <!-- Sub Cost -->          
           <!-- Add Sub Button -->
-          <button type="submit" class="btn btn-primary">Add Sub</button>
+          <button type="submit" class="btn btn-primary" onclick="makeSub(); displayOrder()" >Add Sub</button>
         </form>
       </div>
+      <div class="output">
+        <div class="outHeader">
+          <h3>Your Current Order:</h3>
+          <div class="totalOrder"><h3 id="orderTotal">R0.00</h3></div>
+        </div>
+        <div id="orders">
+  
+        </div>
+        <div class="button-con">
+          <button class="btn btn-primary" type="button">Proceed to Checkout!</button>    
+        </div>
+  
+      </div>
+  
   </body>
 </html>  
